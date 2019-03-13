@@ -1,0 +1,7 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    { "key": "alt+s", "command": "cursorLeft", "when": "textInputFocus" },
+    { "key": "alt+f", "command": "cursorRight", "when": "textInputFocus" },
+    { "key": "alt+e", "command": "cursorUp", "when": "textInputFocus" },
+    { "key": "alt+d", "command": "cursorDown", "when": "textInputFocus" },
+]
