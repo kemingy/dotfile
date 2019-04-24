@@ -1,0 +1,9 @@
+language: bash
+
+before_script:
+  - apt-get install git
+  - git clone --depth=1 https://github.com/kemingy/dotfile.git ~/.dotfile
+
+script:
+  - cd ~/.dotfile && sh bootstrap_basic.sh
+  - cd ~/.dotfile && sh bootstrap.sh
