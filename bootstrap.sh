@@ -16,7 +16,7 @@ cat vim/.vimrc >> ${HOME}/.vim_runtime/my_configs.vim
 
 # Rust
 curl https://sh.rustup.rs -sSf | sh -s -- -y
-sh ${HOME}/.cargo/env
+. ${HOME}/.cargo/env
 cargo install lsd --force
 cargo install bat --force
 cargo install xsv --force
