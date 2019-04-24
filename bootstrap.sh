@@ -9,12 +9,6 @@ mkdir -p ~/Downloads
 printf '\nyes\n\nyes\n' | sh ~/Downloads/${CONDA} -s -- -u
 sh ~/.bashrc
 
-# process to install fish-shell
-printf '\n' | conda install -c conda-forge fish
-curl -L https://get.oh-my.fish | fish
-~/.config/omf
-omf install bira
-
 # vimrc
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
@@ -27,5 +21,11 @@ sh ~/.cargo/env
 cargo install lsd
 cargo install bat
 cargo install xsv
+
+# process to install fish-shell
+printf '\n' | conda install -c conda-forge fish
+curl -L https://get.oh-my.fish | fish
+~/.config/omf
+omf install bira
 
 echo "Enjoy :-)"
