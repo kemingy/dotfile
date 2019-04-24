@@ -4,7 +4,7 @@ set -e
 CONDA="Miniconda3-latest-Linux-x86_64.sh"
 
 mkdir -p ~/Downloads
-[ ! -f "~/Downloads/${CONDA}" ] || cd ~/Downloads && wget "https://repo.anaconda.com/miniconda/${CONDA}"
+[ ! -f "~/Downloads/${CONDA}" ] || wget -O ~/Downloads/${CONDA} "https://repo.anaconda.com/miniconda/${CONDA}"
 # start | accept | location | init
 printf '\nyes\n\nyes\n' | sh ~/Downloads/${CONDA} -s -- -u
 sh ~/.bashrc
