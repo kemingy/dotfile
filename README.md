@@ -6,14 +6,14 @@ This is my personal dotfile.
 
 **basic env**
 
-- [x] mini-conda
-- [x] fish-shell & oh-my-fish
+- [x] [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+- [x] [fish-shell](https://fishshell.com) & [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
 - [x] vimrc [https://github.com/amix/vimrc]
 
 **standard env**
 
-- [x] Rust
-- [x] lsd, bat, xsv
+- [x] [Rust](https://www.rust-lang.org/)
+- [x] [lsd](https://github.com/Peltoche/lsd), [bat](https://github.com/sharkdp/bat), [xsv](https://github.com/BurntSushi/xsv)
 - [ ] [nvtop](https://github.com/Syllo/nvtop)
 
 ## install
@@ -25,6 +25,6 @@ cd ~/.dotfile && sh bootstrap.sh
 
 For basic env, use `cd ~/.dotfile && sh bootstrap_basic.sh`.
 
-## uninstall fish & oh-my-fish
+## uninstall vimrc, rust, fish
 
 `cd ~/.dotfile && fish uninstall.fish`
