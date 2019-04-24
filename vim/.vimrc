@@ -15,3 +15,6 @@ colorscheme solarized
 
 " ruler
 set cc=80
+
+" ignore go error when use old vim
+let g:go_version_warning = 0

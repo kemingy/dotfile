@@ -4,8 +4,10 @@ This is my personal dotfile.
 
 ## set up environment
 
-* mini-conda
-* fish-shell
+- [x] mini-conda
+- [x] fish-shell
+- [ ] Rust
+- [ ] lsd, fd, 
 
 ## usage
 
