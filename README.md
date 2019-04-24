@@ -11,5 +11,5 @@ This is my personal dotfile.
 
 ```sh
 git clone --depth=1 https://github.com/kemingy/dotfile.git ~/.dotfile
-cd ~/.dotfile && sh bootstrap.sh
+cd ~/.dotfile && ./bootstrap.sh
 ```
