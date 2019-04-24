@@ -4,16 +4,16 @@ set -e
 CONDA="Miniconda3-latest-Linux-x86_64.sh"
 
 mkdir -p ~/Downloads
-cd ~/Downloads && wget "https://repo.anaconda.com/miniconda/${CONDA}"
-chmod +x ~/Downloads/${CONDA}
+if [ ! -f "~/Downloads/${CONDA}" ]; then
+    cd ~/Downloads && wget "https://repo.anaconda.com/miniconda/${CONDA}"
+fi
 # start | accept | location | init
-printf '\nyes\n\nyes\n' | sh ~/Downloads/${CONDA}
-source ~/.bashrc
+printf '\nyes\n\nyes\n' | sh ~/Downloads/${CONDA} -s -- -u
+sh ~/.bashrc
 
 # process to install fish-shell
 printf '\n' | conda install -c conda-forge fish
 curl -L https://get.oh-my.fish | fish
-omf install bira
 
 # vimrc
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime

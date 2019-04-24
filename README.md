@@ -4,14 +4,26 @@ This is my personal dotfile.
 
 ## set up environment
 
-- [x] mini-conda
-- [x] fish-shell
-- [ ] Rust
-- [ ] lsd, fd, 
+**basic env**
 
-## usage
+- [x] mini-conda
+- [x] fish-shell & oh-my-fish
+
+**standard env**
+
+- [x] Rust
+- [x] lsd, bat, xsv
+- [ ] nvtop
+
+## install
 
 ```sh
 git clone --depth=1 https://github.com/kemingy/dotfile.git ~/.dotfile
 cd ~/.dotfile && ./bootstrap.sh
 ```
+
+For basic env, use `cd ~/.dotfile && ./bootstrap_basic.sh`.
+
+## uninstall fish & oh-my-fish
+
+`cd ~/.dotfile && ./uninstall.sh`

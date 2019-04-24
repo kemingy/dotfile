@@ -4,15 +4,17 @@ set -e
 CONDA="Miniconda3-latest-Linux-x86_64.sh"
 
 mkdir -p ~/Downloads
-cd ~/Downloads && wget "https://repo.anaconda.com/miniconda/${CONDA}"
-chmod +x ~/Downloads/${CONDA}
+if [ ! -f "~/Downloads/${CONDA}" ]; then
+    cd ~/Downloads && wget "https://repo.anaconda.com/miniconda/${CONDA}"
+fi
 # start | accept | location | init
-printf '\nyes\n\nyes\n' | sh ~/Downloads/${CONDA}
-source ~/.bashrc
+printf '\nyes\n\nyes\n' | sh ~/Downloads/${CONDA} -s -- -u
+sh ~/.bashrc
 
 # process to install fish-shell
 printf '\n' | conda install -c conda-forge fish
 curl -L https://get.oh-my.fish | fish
+~/.config/omf
 omf install bira
 
 # vimrc
@@ -25,5 +27,15 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 cat config.fish >> ~/.config/fish/config.fish
 sh ~/.cargo/env
 cargo install lsd
+cargo install bat
+cargo install xsv
+
+# nvtop
+git clone https://github.com/Syllo/nvtop.git
+mkdir -p nvtop/build && cd nvtop/build
+cmake ..
+cmake .. -DNVML_RETRIEVE_HEADER_ONLINE=True
+make
+make install # you may need sudo permission
 
 echo "Enjoy :-)"
