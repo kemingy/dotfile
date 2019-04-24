@@ -17,13 +17,6 @@ omf install bira
 
 # vimrc
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-sh ~/.vim_runtime/install_awesome_vimrc.sh
-cat vim/.vimrc >> ~/.vim_runtime/my_configs.vim
-
-# Rust
-curl https://sh.rustup.rs -sSf | sh -s -- -y
-cat config.fish >> ~/.config/fish/config.fish
-sh ~/.cargo/env
-cargo install lsd
+sh ~/.vim_runtime/install_basic_vimrc.sh
 
 echo "Enjoy :-)"
