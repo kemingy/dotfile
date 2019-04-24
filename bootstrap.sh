@@ -23,8 +23,9 @@ cargo install xsv --force
 
 # process to install fish-shell
 printf '\n' | conda install -c conda-forge fish
-curl -L https://get.oh-my.fish | fish
+mkdir -p ${HOME}/.config/fish/
 cat config.fish >> ${HOME}/.config/fish/config.fish
+curl -L https://get.oh-my.fish | fish
 omf install bira
 
 echo "Enjoy :-)"
