@@ -1,7 +1,6 @@
 language: bash
 
 before_script:
-  - apt-get install git
   - git clone --depth=1 https://github.com/kemingy/dotfile.git ~/.dotfile
 
 script:
