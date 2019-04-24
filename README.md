@@ -20,11 +20,11 @@ This is my personal dotfile.
 
 ```sh
 git clone --depth=1 https://github.com/kemingy/dotfile.git ~/.dotfile
-cd ~/.dotfile && ./bootstrap.sh
+cd ~/.dotfile && sh bootstrap.sh
 ```
 
-For basic env, use `cd ~/.dotfile && ./bootstrap_basic.sh`.
+For basic env, use `cd ~/.dotfile && sh bootstrap_basic.sh`.
 
 ## uninstall fish & oh-my-fish
 
-`cd ~/.dotfile && ./uninstall.sh`
+`cd ~/.dotfile && fish uninstall.fish`
