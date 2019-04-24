@@ -4,9 +4,7 @@ set -e
 CONDA="Miniconda3-latest-Linux-x86_64.sh"
 
 mkdir -p ~/Downloads
-if [ ! -f "~/Downloads/${CONDA}" ]; then
-    cd ~/Downloads && wget "https://repo.anaconda.com/miniconda/${CONDA}"
-fi
+[ ! -f "~/Downloads/${CONDA}" ] || cd ~/Downloads && wget "https://repo.anaconda.com/miniconda/${CONDA}"
 # start | accept | location | init
 printf '\nyes\n\nyes\n' | sh ~/Downloads/${CONDA} -s -- -u
 sh ~/.bashrc
@@ -29,13 +27,5 @@ sh ~/.cargo/env
 cargo install lsd
 cargo install bat
 cargo install xsv
-
-# nvtop
-git clone https://github.com/Syllo/nvtop.git
-mkdir -p nvtop/build && cd nvtop/build
-cmake ..
-cmake .. -DNVML_RETRIEVE_HEADER_ONLINE=True
-make
-make install # you may need sudo permission
 
 echo "Enjoy :-)"

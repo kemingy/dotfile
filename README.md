@@ -8,12 +8,13 @@ This is my personal dotfile.
 
 - [x] mini-conda
 - [x] fish-shell & oh-my-fish
+- [x] vimrc [https://github.com/amix/vimrc]
 
 **standard env**
 
 - [x] Rust
 - [x] lsd, bat, xsv
-- [ ] nvtop
+- [ ] [nvtop](https://github.com/Syllo/nvtop)
 
 ## install
 
