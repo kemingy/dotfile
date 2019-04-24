@@ -18,14 +18,13 @@ cat vim/.vimrc >> ~/.vim_runtime/my_configs.vim
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 cat config.fish >> ~/.config/fish/config.fish
 sh ~/.cargo/env
-cargo install lsd
-cargo install bat
-cargo install xsv
+cargo install lsd --force
+cargo install bat --force
+cargo install xsv --force
 
 # process to install fish-shell
 printf '\n' | conda install -c conda-forge fish
 curl -L https://get.oh-my.fish | fish
-~/.config/omf
 omf install bira
 
 echo "Enjoy :-)"
