@@ -7,8 +7,8 @@ CONDA="Miniconda3-latest-Linux-x86_64.sh"
 mkdir -p ${HOME}/Downloads
 [ -f "${HOME}/Downloads/${CONDA}" ] || wget -O ${HOME}/Downloads/${CONDA} "https://repo.anaconda.com/miniconda/${CONDA}"
 sh ${HOME}/Downloads/${CONDA} -b -u
-eval $(${HOME}/miniconda3/bin/conda shell.bash hook)
-conda init
+${HOME}/miniconda3/bin/conda init
+. ${HOME}/.bashrc
 
 # vimrc
 git clone --depth=1 https://github.com/amix/vimrc.git ${HOME}/.vim_runtime
