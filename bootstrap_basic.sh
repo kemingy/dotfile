@@ -9,6 +9,7 @@ mkdir -p ${HOME}/Downloads
 sh ${HOME}/Downloads/${CONDA} -b -u
 ${HOME}/miniconda3/bin/conda init
 . ${HOME}/.bashrc
+pip install --upgrade https://github.com/jakubroztocil/httpie/archive/master.tar.gz
 
 # vimrc
 git clone --depth=1 https://github.com/amix/vimrc.git ${HOME}/.vim_runtime
