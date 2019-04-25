@@ -9,6 +9,7 @@ This is my personal dotfile.
 - [x] [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 - [x] [fish-shell](https://fishshell.com) & [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
 - [x] vimrc [https://github.com/amix/vimrc]
+- [x] [httpie](https://github.com/jakubroztocil/httpie)
 
 **standard env**
 
