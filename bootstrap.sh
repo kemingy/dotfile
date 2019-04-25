@@ -3,11 +3,12 @@ set -e
 
 CONDA="Miniconda3-latest-Linux-x86_64.sh"
 
+# conda
 mkdir -p ${HOME}/Downloads
 [ -f "${HOME}/Downloads/${CONDA}" ] || wget -O ${HOME}/Downloads/${CONDA} "https://repo.anaconda.com/miniconda/${CONDA}"
-# start | accept | location | init
 sh ${HOME}/Downloads/${CONDA} -b -u
-. ${HOME}/.bashrc
+eval $(${HOME}/miniconda3/bin/conda shell.bash hook)
+conda init
 
 # vimrc
 git clone --depth=1 https://github.com/amix/vimrc.git ${HOME}/.vim_runtime
@@ -21,7 +22,7 @@ cargo install lsd --force
 cargo install bat --force
 cargo install xsv --force
 
-# process to install fish-shell
+# fish-shell
 conda install -y -c conda-forge fish
 mkdir -p ${HOME}/.config/fish/
 cat config.fish >> ${HOME}/.config/fish/config.fish
