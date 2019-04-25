@@ -8,4 +8,4 @@ printf 'y\n' | rustup self uninstall
 rm $HOME/.config/fish/config.fish
 rm $HOME/.local/share/omf
 printf 'y\n' | omf destroy
-printf '\n' | conda remove fish
+conda remove -y fish

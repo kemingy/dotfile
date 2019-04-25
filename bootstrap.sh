@@ -6,7 +6,7 @@ CONDA="Miniconda3-latest-Linux-x86_64.sh"
 mkdir -p ${HOME}/Downloads
 [ -f "${HOME}/Downloads/${CONDA}" ] || wget -O ${HOME}/Downloads/${CONDA} "https://repo.anaconda.com/miniconda/${CONDA}"
 # start | accept | location | init
-printf '\nyes\n\nyes\n' | sh ${HOME}/Downloads/${CONDA} -s -- -u
+sh ${HOME}/Downloads/${CONDA} -b -u
 . ${HOME}/.bashrc
 
 # vimrc
@@ -22,7 +22,7 @@ cargo install bat --force
 cargo install xsv --force
 
 # process to install fish-shell
-printf '\n' | conda install -c conda-forge fish
+conda install -y -c conda-forge fish
 mkdir -p ${HOME}/.config/fish/
 cat config.fish >> ${HOME}/.config/fish/config.fish
 curl -L https://get.oh-my.fish | fish
