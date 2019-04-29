@@ -11,7 +11,7 @@ sudo apt-get update
 sudo apt-get install virtualbox-6.0
 
 # vagrant
-wget -O ${HOME}/Downloads/ "https://releases.hashicorp.com/vagrant/${VAGRANT_VERSION}/vagrant_${VAGRANT_VERSION}_x86_64.deb"
+wget -O ${HOME}/Downloads/vagrant_${VAGRANT_VERSION}_x86_64.deb "https://releases.hashicorp.com/vagrant/${VAGRANT_VERSION}/vagrant_${VAGRANT_VERSION}_x86_64.deb"
 sudo dpkg -i ${HOME}/Downloads/vagrant_${VAGRANT_VERSION}_x86_64.deb
 
 # nomad
