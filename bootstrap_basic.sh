@@ -15,6 +15,10 @@ pip install --upgrade https://github.com/jakubroztocil/httpie/archive/master.tar
 git clone --depth=1 https://github.com/amix/vimrc.git ${HOME}/.vim_runtime
 sh ${HOME}/.vim_runtime/install_basic_vimrc.sh
 
+# git
+git config --global core.excludesfile ~/.gitignore_global
+cp .gitignore_global ~/.gitignore_global
+
 # fish-shell
 conda install -y -c conda-forge fish
 curl -L https://get.oh-my.fish | fish
