@@ -10,8 +10,9 @@ set cursorline
 hi CursorLine cterm=NONE ctermbg=235
 
 " color theme
-set background=dark
-colorscheme solarized
+" one: https://github.com/rakr/vim-one
+set background=light
+colorscheme one
 
 " ruler
 set cc=80
