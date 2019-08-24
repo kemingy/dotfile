@@ -10,6 +10,7 @@ This is my personal dotfile.
 - [x] [fish-shell](https://fishshell.com) & [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
 - [x] vimrc [https://github.com/amix/vimrc]
 - [x] [httpie](https://github.com/jakubroztocil/httpie)
+- [x] tmux.conf
 
 **standard env**
 

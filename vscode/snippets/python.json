@@ -29,6 +29,13 @@
 			"        self.value = value",
 			"        self.left = left",
 			"        self.right = right",
+			"",
+			"    def display(self, space=0):",
+			"        if self.right:",
+			"            self.right.display(space=space+4)",
+			"        print('{}{}'.format(' ' * space, self.value))",
+			"        if self.left:",
+			"            self.left.display(space=space+4)",
 		],
 		"description": "",
 	}

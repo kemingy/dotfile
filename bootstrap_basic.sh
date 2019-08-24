@@ -19,6 +19,9 @@ sh ${HOME}/.vim_runtime/install_basic_vimrc.sh
 git config --global core.excludesfile ~/.gitignore_global
 cp .gitignore_global ~/.gitignore_global
 
+# tmux conf
+cp .tmux.conf ${HOME}/
+
 # fish-shell
 conda install -y -c conda-forge fish
 curl -L https://get.oh-my.fish | fish

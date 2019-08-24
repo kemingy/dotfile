@@ -20,6 +20,9 @@ cat vim/.vimrc >> ${HOME}/.vim_runtime/my_configs.vim
 git config --global core.excludesfile ~/.gitignore_global
 cp .gitignore_global ~/.gitignore_global
 
+# tmux conf
+cp .tmux.conf ${HOME}/
+
 # Rust
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 . ${HOME}/.cargo/env
@@ -32,6 +35,6 @@ conda install -y -c conda-forge fish
 mkdir -p ${HOME}/.config/fish/
 cat config.fish >> ${HOME}/.config/fish/config.fish
 curl -L https://get.oh-my.fish | fish
-omf install bira
+omf install cbjohnson
 
 echo "Enjoy :-)"
