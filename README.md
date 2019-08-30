@@ -1,5 +1,9 @@
 # Dotfile
 
+[![Build Status](https://travis-ci.com/kemingy/dotfile.svg?branch=master)](https://travis-ci.com/kemingy/dotfile)
+![GitHub](https://img.shields.io/github/license/kemingy/dotfile)
+
+
 This is my personal dotfile.
 
 ## set up environment
@@ -11,6 +15,7 @@ This is my personal dotfile.
 - [x] vimrc [https://github.com/amix/vimrc]
 - [x] [httpie](https://github.com/jakubroztocil/httpie)
 - [x] tmux.conf
+- [x] global git ignore
 
 **standard env**
 
