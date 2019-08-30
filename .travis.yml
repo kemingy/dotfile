@@ -4,4 +4,4 @@ before_script:
   - git clone --depth=1 https://github.com/kemingy/dotfile.git ~/.dotfile
 
 script:
-  - cd ~/.dotfile && sh bootstrap_basic.sh
+  - cd ~/.dotfile && sh bootstrap.sh
