@@ -5,4 +5,3 @@ before_script:
 
 script:
   - cd ~/.dotfile && sh bootstrap_basic.sh
-  - cd ~/.dotfile && sh bootstrap.sh
