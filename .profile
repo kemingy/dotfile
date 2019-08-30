@@ -15,6 +15,9 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
+## bat
+export BAT_THEME=GitHub
+
 # encode
 export LANG=C.UTF-8
 export LC_ALL=C.UTF-8
