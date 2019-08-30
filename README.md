@@ -27,10 +27,10 @@ This is my personal dotfile.
 
 ```sh
 git clone --depth=1 https://github.com/kemingy/dotfile.git ~/.dotfile
-cd ~/.dotfile && sh bootstrap.sh
+cd ~/.dotfile && sh bootstrap_basic.sh
 ```
 
-For basic env, use `cd ~/.dotfile && sh bootstrap_basic.sh`.
+For Rust users, use `cd ~/.dotfile && sh bootstrap.sh`.
 
 ## uninstall vimrc, rust, fish
 
