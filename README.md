@@ -1,6 +1,7 @@
 # Dotfile
 
-<img src="https://github.com/kemingy/dotfile/workflows/CI/badge.svg">[![Build Status](https://travis-ci.com/kemingy/dotfile.svg?branch=master)](https://travis-ci.com/kemingy/dotfile)
+[![GitHub Actions](https://github.com/kemingy/dotfile/workflows/CI/badge.svg)](https://github.com/kemingy/dotfile/actions)
+[![Build Status](https://travis-ci.com/kemingy/dotfile.svg?branch=master)](https://travis-ci.com/kemingy/dotfile)
 ![GitHub](https://img.shields.io/github/license/kemingy/dotfile)
 
 
