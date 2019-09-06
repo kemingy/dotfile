@@ -4,11 +4,12 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-18.04
-    
     steps:
     - uses: actions/checkout@v1
-      with:
-        fetch-depth: 1
-      run: sh bootstrap.sh
+    - name: setup env
+      run: |
+        apt-get update --fix-missing
+        apt-get install -y git curl wget
+    - name: test
+      run: sh boostrap.sh
