@@ -6,4 +6,4 @@ ${HOME}/miniconda3/bin/conda install -y -c conda-forge fish
 mkdir -p ${HOME}/.config/fish/
 cp config.fish ${HOME}/.config/fish/config.fish
 curl -L https://get.oh-my.fish | ${HOME}/miniconda3/bin/fish
-omf install cbjohnson
+# omf install cbjohnson
