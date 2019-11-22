@@ -5,13 +5,14 @@ set -e
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 . ${HOME}/.cargo/env
 
-# lsd
-LSD_VERSION="0.16.0"
-LSD="lsd_${LSD_VERSION}_amd64.deb"
+# exa
+https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
+EXA_VERSION="0.9.0"
+EXA="exa-linux-x86_64-${EXA_VERSION}.zip"
 
-[ -f "${HOME}/Downloads/${LSD}" ] || wget -O ${HOME}/Downloads/${LSD} "https://github.com/Peltoche/lsd/releases/download/${LSD_VERSION}/${LSD}"
-
-sudo dpkg -i ${HOME}/Downloads/${LSD}
+[ -f "${HOME}/Downloads/${EXA}" ] || wget -O ${HOME}/Downloads/${EXA} "https://github.com/ogham/exa/releases/download/v${EXA_VERSION}/${EXA}"
+unzip ${EXA}
+sudo cp "${HOME}/Downloads/exa-linux-x86_64" /usr/local/bin/exa
 
 
 # bat

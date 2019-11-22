@@ -8,8 +8,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-## lsd
-alias ls='lsd'
+## exa
+alias ls='exa'
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'

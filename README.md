@@ -18,7 +18,7 @@ This is my personal dotfile.
 - [x] tmux.conf
 - [x] global git ignore
 - [x] [Rust](https://www.rust-lang.org/)
-- [x] [lsd](https://github.com/Peltoche/lsd), [bat](https://github.com/sharkdp/bat)
+- [x] [exa](https://github.com/ogham/exa), [bat](https://github.com/sharkdp/bat)
 - [ ] [nvtop](https://github.com/Syllo/nvtop)
 
 ## install
