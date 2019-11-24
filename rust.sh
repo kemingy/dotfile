@@ -2,16 +2,15 @@
 set -e
 
 # Rust
-curl https://sh.rustup.rs -sSf | sh -s -- -y
-. ${HOME}/.cargo/env
+# curl https://sh.rustup.rs -sSf | sh -s -- -y
+# . ${HOME}/.cargo/env
 
 # exa
-https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
 EXA_VERSION="0.9.0"
 EXA="exa-linux-x86_64-${EXA_VERSION}.zip"
 
 [ -f "${HOME}/Downloads/${EXA}" ] || wget -O ${HOME}/Downloads/${EXA} "https://github.com/ogham/exa/releases/download/v${EXA_VERSION}/${EXA}"
-unzip ${EXA}
+unzip "${HOME}/Downloads/${EXA}"
 sudo cp "${HOME}/Downloads/exa-linux-x86_64" /usr/local/bin/exa
 
 
