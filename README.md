@@ -19,6 +19,7 @@ This is my personal dotfile.
 - [x] global git ignore
 - [x] [Rust](https://www.rust-lang.org/)
 - [x] [exa](https://github.com/ogham/exa), [bat](https://github.com/sharkdp/bat), [rg](https://github.com/BurntSushi/ripgrep)
+- [x] [starship](https://github.com/starship/starship)
 - [ ] [nvtop](https://github.com/Syllo/nvtop)
 
 ## install
