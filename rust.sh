@@ -10,14 +10,22 @@ BAT_VERSION="0.11.0"
 BAT="bat_${BAT_VERSION}_amd64.deb"
 
 [ -f "${HOME}/Downloads/${BAT}" ] || wget -O ${HOME}/Downloads/${BAT} "https://github.com/sharkdp/bat/releases/download/v${BAT_VERSION}/${BAT}"
-sudo dpkg -i ${HOME}/Downloads/${BAT}
+if [[ $EUID -ne 0 ]]; then
+    sudo dpkg -i ${HOME}/Downloads/${BAT}
+else
+    dpkg -i ${HOME}/Downloads/${BAT}
+fi
 
 # rg
 RG_VERSION="11.0.2"
 RG="ripgrep_${RG_VERSION}_amd64.deb"
 
 [ -f "${HOME}/Downloads/${RG}" ] || wget -O ${HOME}/Downloads/${RG} "https://github.com/BurntSushi/ripgrep/releases/download/${RG_VERSION}/${RG}"
-sudo dpkg -i ${HOME}/Downloads/${RG}
+if [[ $EUID -ne 0 ]]; then
+    sudo dpkg -i ${HOME}/Downloads/${RG}
+else
+    dpkg -i ${HOME}/Downloads/${RG}
+fi
 
 # exa
 EXA_VERSION="0.9.0"
@@ -28,7 +36,11 @@ if [ ! -d "$DIR" ]; then
     sudo apt install zip -y
 fi
 unzip "${HOME}/Downloads/${EXA}" -d "${HOME}/Downloads/"
-sudo cp "${HOME}/Downloads/exa-linux-x86_64" /usr/local/bin/exa
+if [[ $EUID -ne 0 ]]; then
+    sudo cp "${HOME}/Downloads/exa-linux-x86_64" /usr/local/bin/exa
+else
+    cp "${HOME}/Downloads/exa-linux-x86_64" /usr/local/bin/exa
+fi
 
 # starship
 bash -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes
