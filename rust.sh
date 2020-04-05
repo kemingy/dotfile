@@ -29,3 +29,6 @@ if [ ! -d "$DIR" ]; then
 fi
 unzip "${HOME}/Downloads/${EXA}" -d "${HOME}/Downloads/"
 sudo cp "${HOME}/Downloads/exa-linux-x86_64" /usr/local/bin/exa
+
+# starship
+bash -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes

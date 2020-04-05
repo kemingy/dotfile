@@ -26,3 +26,6 @@ export LC_ALL=en_US.UTF-8
 
 ## bat
 export BAT_THEME=GitHub
+
+## starship
+starship init fish | source

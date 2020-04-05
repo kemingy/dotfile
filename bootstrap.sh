@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for cmd in py.sh vim.sh git.sh tmux.sh rust.sh fish.sh
+for cmd in base.sh py.sh vim.sh git.sh tmux.sh rust.sh fish.sh
 do
     sh $cmd
 done
