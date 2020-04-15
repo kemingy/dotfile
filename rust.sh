@@ -33,7 +33,7 @@ EXA="exa-linux-x86_64-${EXA_VERSION}.zip"
 
 [ -f "${HOME}/Downloads/${EXA}" ] || wget -O ${HOME}/Downloads/${EXA} "https://github.com/ogham/exa/releases/download/v${EXA_VERSION}/${EXA}"
 if [ ! -d "$DIR" ]; then
-    if [ $EUID -ne 0]; then
+    if [ $EUID -ne 0 ]; then
         sudo apt install zip -y
     else
         apt install zip -y
