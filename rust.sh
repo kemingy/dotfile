@@ -17,7 +17,7 @@ else
 fi
 
 # rg
-RG_VERSION="11.0.2"
+RG_VERSION="12.0.0"
 RG="ripgrep_${RG_VERSION}_amd64.deb"
 
 [ -f "${HOME}/Downloads/${RG}" ] || wget -O ${HOME}/Downloads/${RG} "https://github.com/BurntSushi/ripgrep/releases/download/${RG_VERSION}/${RG}"
