@@ -2,7 +2,10 @@
 source $HOME/.cargo/env
 
 ## git
-alias gitcom="git commit -m "
+alias gitc="git commit -m "
+alias gits="git status"
+alias gitd="git diff"
+alias gita="git add"
 
 ## ls
 alias ll='ls -alF'
