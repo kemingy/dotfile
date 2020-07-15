@@ -18,7 +18,7 @@ This is my personal dotfile.
 - [x] tmux.conf
 - [x] global git ignore
 - [x] [Rust](https://www.rust-lang.org/)
-- [x] [exa](https://github.com/ogham/exa), [bat](https://github.com/sharkdp/bat), [rg](https://github.com/BurntSushi/ripgrep)
+- [x] [exa](https://github.com/ogham/exa), [bat](https://github.com/sharkdp/bat), [rg](https://github.com/BurntSushi/ripgrep), [starship](https://starship.rs/)
 - [x] [starship](https://github.com/starship/starship)
 - [ ] [nvtop](https://github.com/Syllo/nvtop)
 
@@ -32,3 +32,9 @@ cd ~/.dotfile && sh bootstrap.sh
 ## uninstall vimrc, rust, fish
 
 `cd ~/.dotfile && fish uninstall.fish`
+
+## Ref
+
+* [Desktop and editor setup for Rust development by Jon Gjengset](https://youtu.be/ycMiMDHopNc)
+* [lsd: the next gen ls command](https://github.com/Peltoche/lsd)
+* [iredis: interactive redis cli tool with autocompletion and highlight](https://github.com/laixintao/iredis)
