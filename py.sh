@@ -10,4 +10,6 @@ sh ${HOME}/Downloads/${CONDA} -b -u
 ${HOME}/miniconda3/bin/conda init
 [ -f "${HOME}/Downloads/${CONDA}" ] || touch ${HOME}/.bashrc
 . ${HOME}/.bashrc
-pip install --upgrade https://github.com/jakubroztocil/httpie/archive/master.tar.gz
+pip install httpie flake8
+mkdir -p ${HOME}/.config
+cp flake8 ${HOME}/.config/
