@@ -6,7 +6,7 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 . ${HOME}/.cargo/env
 
 # bat
-BAT_VERSION="0.11.0"
+BAT_VERSION="0.15.4"
 BAT="bat_${BAT_VERSION}_amd64.deb"
 
 [ -f "${HOME}/Downloads/${BAT}" ] || wget -O ${HOME}/Downloads/${BAT} "https://github.com/sharkdp/bat/releases/download/v${BAT_VERSION}/${BAT}"
@@ -17,7 +17,7 @@ else
 fi
 
 # rg
-RG_VERSION="12.0.0"
+RG_VERSION="12.1.1"
 RG="ripgrep_${RG_VERSION}_amd64.deb"
 
 [ -f "${HOME}/Downloads/${RG}" ] || wget -O ${HOME}/Downloads/${RG} "https://github.com/BurntSushi/ripgrep/releases/download/${RG_VERSION}/${RG}"
