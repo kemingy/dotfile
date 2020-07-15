@@ -47,4 +47,4 @@ else
 fi
 
 # starship
-bash -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes
+bash -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes --platform unknown-linux-musl
