@@ -39,3 +39,4 @@ cd ~/.dotfile && sh bootstrap.sh
 * [lsd: the next gen ls command](https://github.com/Peltoche/lsd)
 * [delta: a viewer for git and diff output](https://github.com/dandavison/delta)
 * [iredis: interactive redis cli tool with autocompletion and highlight](https://github.com/laixintao/iredis)
+* [Nu Shell: a new type of shell that print in table format](https://github.com/nushell/nushell)
