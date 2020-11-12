@@ -1,7 +1,6 @@
 # Dotfile
 
 [![GitHub Actions](https://github.com/kemingy/dotfile/workflows/CI/badge.svg)](https://github.com/kemingy/dotfile/actions)
-[![Build Status](https://travis-ci.com/kemingy/dotfile.svg?branch=master)](https://travis-ci.com/kemingy/dotfile)
 ![GitHub](https://img.shields.io/github/license/kemingy/dotfile)
 
 
@@ -20,6 +19,9 @@ This is my personal dotfile.
 - [x] [Rust](https://www.rust-lang.org/)
 - [x] [exa](https://github.com/ogham/exa), [bat](https://github.com/sharkdp/bat), [rg](https://github.com/BurntSushi/ripgrep), [starship](https://starship.rs/)
 - [x] [starship](https://github.com/starship/starship)
+- [x] [hyperfine](https://github.com/sharkdp/hyperfine)
+- [x] [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [x] [bat](https://github.com/sharkdp/bat)
 - [ ] [nvtop](https://github.com/Syllo/nvtop)
 
 ## install
