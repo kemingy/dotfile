@@ -10,6 +10,7 @@ sh ${HOME}/Downloads/${CONDA} -b -u
 ${HOME}/miniconda3/bin/conda init
 [ -f "${HOME}/Downloads/${CONDA}" ] || touch ${HOME}/.bashrc
 . ${HOME}/.bashrc
-pip install httpie flake8 ipython
+conda install -c conda-forge hyperfine
+pip install httpie flake8 black isort autoflake ipython
 mkdir -p ${HOME}/.config
 cp flake8 ${HOME}/.config/
