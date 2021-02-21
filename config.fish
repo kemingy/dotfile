@@ -1,6 +1,3 @@
-# cargo
-source $HOME/.cargo/env
-
 ## git
 alias gitc="git commit -m "
 alias gits="git status"
