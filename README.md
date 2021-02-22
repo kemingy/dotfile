@@ -22,6 +22,7 @@ This is my personal dotfile.
 - [x] [hyperfine](https://github.com/sharkdp/hyperfine)
 - [x] [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [x] [bat](https://github.com/sharkdp/bat)
+- [x] [delta](https://github.com/dandavison/delta)
 - [ ] [nvtop](https://github.com/Syllo/nvtop)
 
 ## install
