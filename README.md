@@ -11,19 +11,16 @@ This is my personal dotfile.
 **basic env**
 
 - [x] [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
-- [x] [fish-shell](https://fishshell.com) & [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
+- [x] [fish-shell](https://fishshell.com)
 - [x] vimrc [https://github.com/amix/vimrc]
 - [x] [httpie](https://github.com/jakubroztocil/httpie)
 - [x] tmux.conf
 - [x] global git ignore
 - [x] [Rust](https://www.rust-lang.org/)
-- [x] [exa](https://github.com/ogham/exa), [bat](https://github.com/sharkdp/bat), [rg](https://github.com/BurntSushi/ripgrep), [starship](https://starship.rs/)
-- [x] [starship](https://github.com/starship/starship)
-- [x] [hyperfine](https://github.com/sharkdp/hyperfine)
+- [x] [exa](https://github.com/ogham/exa)
 - [x] [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [x] [bat](https://github.com/sharkdp/bat)
 - [x] [delta](https://github.com/dandavison/delta)
-- [ ] [nvtop](https://github.com/Syllo/nvtop)
 
 ## install
 
