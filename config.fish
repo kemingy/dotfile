@@ -3,6 +3,7 @@ alias gitc="git commit -m "
 alias gits="git status"
 alias gitd="git diff"
 alias gita="git add"
+alias gitp="git push"
 
 ## ls
 alias ll='ls -alF'
