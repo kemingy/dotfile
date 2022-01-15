@@ -4,3 +4,21 @@
 
 [interactive]
 	diffFilter = delta --color-only --light
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
+
+[delta]
+	navigate = true
+
+[delta "interactive"]
+	keep-plus-minus-markers = false
+
+[delta "decorations"]
+	commit-style = raw
+	file-style = omit
+	hunk-header-style = file line-number syntax
+
