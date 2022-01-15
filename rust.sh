@@ -15,5 +15,3 @@ else
     dpkg -i ${HOME}/Downloads/${DELTA}
 fi
 
-# starship
-bash -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes --platform unknown-linux-musl
