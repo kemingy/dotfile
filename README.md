@@ -21,6 +21,7 @@ This is my personal dotfile.
 - [x] [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [x] [bat](https://github.com/sharkdp/bat)
 - [x] [delta](https://github.com/dandavison/delta)
+- [x] [fd](https://github.com/sharkdp/fd)
 
 ## install
 
