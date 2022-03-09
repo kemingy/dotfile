@@ -2,6 +2,12 @@
 	excludesfile = ~/.gitignore_global
 	pager = delta
 
+[alias]
+	st = status
+	ci = commit -v
+	last = log -1 HEAD
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
 [interactive]
 	diffFilter = delta --color-only --light
 
@@ -13,12 +19,4 @@
 
 [delta]
 	navigate = true
-
-[delta "interactive"]
-	keep-plus-minus-markers = false
-
-[delta "decorations"]
-	commit-style = raw
-	file-style = omit
-	hunk-header-style = file line-number syntax
-
+	line-numbers = true
