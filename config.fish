@@ -8,7 +8,7 @@ alias gitp="git push"
 ## ls
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
+alias l='ls -F'
 
 ## exa
 alias ls='exa'
@@ -16,10 +16,6 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
-
-# conda
-conda deactivate
-conda activate base
 
 # encode
 export LANG=en_US.UTF-8

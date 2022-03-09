@@ -6,7 +6,7 @@ alias gitcom="git commit -m "
 ## ls
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
+alias l='ls -F'
 
 ## exa
 alias ls='exa'
