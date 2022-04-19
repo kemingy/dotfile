@@ -17,6 +17,8 @@ set scrolloff=8
 set noshowmode
 set completeopt=menuone,noinsert,noselect
 set cmdheight=2
+set list listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+set cursorline
 
 " Plugins with vim plug
 call plug#begin('~/.vim/plugged')
