@@ -1,0 +1,11 @@
+[status]
+map_symbol = true
+disabled = false
+
+[username]
+disabled = false
+show_always = true
+
+[sudo]
+disabled = false
+allow_windows = true
