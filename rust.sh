@@ -2,7 +2,7 @@
 set -e
 
 # Rust
-curl https://sh.rustup.rs -sSf | sh -s -- -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 . ${HOME}/.cargo/env
 
 # delta
