@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 CONDA="Miniconda3-latest-Linux-x86_64.sh"
 

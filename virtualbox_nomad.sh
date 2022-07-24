@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 VAGRANT_VERSION="2.2.4"
 

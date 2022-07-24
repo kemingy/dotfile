@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 # git
 git config --global alias.adog "log --all --decorate --oneline --graph"

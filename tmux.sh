@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 # tmux conf
 cp .tmux.conf ${HOME}/

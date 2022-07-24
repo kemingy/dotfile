@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 # fish-shell
 ${HOME}/miniconda3/bin/conda install -y -c conda-forge fish
