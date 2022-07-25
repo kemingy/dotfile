@@ -87,7 +87,7 @@ local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
 local SOLID_RIGHT_ARROW = utf8.char(0xe0b0)
 
 return {
-  default_prog = {"wsl"},
+  default_prog = {"bash"},
   font = wezterm.font_with_fallback({
     "Cascadia Code PL",
     "Fira Code",
