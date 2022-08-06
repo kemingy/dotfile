@@ -5,6 +5,7 @@ if type -q git
     abbr -a gitd 'git diff'
     abbr -a gita 'git add'
     abbr -a gitp 'git push'
+    abbr -a gitup 'git fetch upstream && git merge upstream/main'
 end
 
 # encode
@@ -43,7 +44,7 @@ setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 ## functions
 function rep -d "make sure `rg` result can jump to the match line in VSCode terminal"
     # TODO: color support (--color always)
-    rg --no-heading -n $argv | sed 's/:[0-9]\+:/& /g'
+    rg --no-heading -n $argv | sed 's/:[0-9]\+:/& /'
 end
 
 # starship (this has to be placed at the end of this file)
