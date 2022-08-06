@@ -41,8 +41,7 @@ setenv LESS_TERMCAP_ue \e'[0m'           # end underline
 setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
 ## functions
-function rep
-    # make sure `rg` result can jump to the match line in VSCode terminal
+function rep -d "make sure `rg` result can jump to the match line in VSCode terminal"
     # TODO: color support (--color always)
     rg --no-heading -n $argv | sed 's/:[0-9]\+:/& /g'
 end
