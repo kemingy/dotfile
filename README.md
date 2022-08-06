@@ -20,7 +20,7 @@ This is my personal dotfile.
 - [x] [exa](https://github.com/ogham/exa)
 - [x] [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [x] [bat](https://github.com/sharkdp/bat)
-- [x] [delta](https://github.com/dandavison/delta)
+- [x] [difft](https://github.com/Wilfred/difftastic)
 - [x] [fd](https://github.com/sharkdp/fd)
 
 ## install
@@ -37,7 +37,4 @@ cd ~/.dotfile && sh bootstrap.sh
 ## Ref
 
 * [Desktop and editor setup for Rust development by Jon Gjengset](https://youtu.be/ycMiMDHopNc)
-* [lsd: the next gen ls command](https://github.com/Peltoche/lsd)
-* [delta: a viewer for git and diff output](https://github.com/dandavison/delta)
-* [iredis: interactive redis cli tool with autocompletion and highlight](https://github.com/laixintao/iredis)
 * [Nu Shell: a new type of shell that print in table format](https://github.com/nushell/nushell)
