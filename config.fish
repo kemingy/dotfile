@@ -24,5 +24,10 @@ export LC_ALL=en_US.UTF-8
 ## bat
 export BAT_THEME=GitHub
 
+## functions
+function rep
+    rg --no-heading -n $argv | sed 's/:[0-9]\+:/& /g'
+end
+
 ## starship
 starship init fish | source
