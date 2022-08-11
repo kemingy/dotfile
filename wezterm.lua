@@ -91,6 +91,7 @@ return {
   font = wezterm.font_with_fallback({
     "Cascadia Code PL",
     "Fira Code",
+    "Noto Color Emoji",
   }),
   font_size = 16.0,
   initial_rows = 40,
@@ -98,4 +99,9 @@ return {
   tab_max_width = 20,
   color_scheme = "primary",
   scrollback_lines = 3500,
+  keys = {
+    { key = 'h', mods = 'CMD', action = wezterm.action.Hide },
+    { key = 'c', mods = 'ALT', action = wezterm.action.CopyTo 'ClipboardAndPrimarySelection' },
+    { key = 'v', mods = 'ALT', action = wezterm.action.PasteFrom 'Clipboard' },
+  },
 }

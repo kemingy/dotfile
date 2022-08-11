@@ -1,6 +1,6 @@
 [core]
 	excludesfile = ~/.gitignore_global
-	pager = delta
+	editor = vim
 
 [alias]
 	st = status
@@ -9,15 +9,27 @@
     lastd = diff HEAD~1...HEAD
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
-[interactive]
-	diffFilter = delta --color-only --light
+[commit]
+	gpgsign = true
 
-[merge]
-	conflictstyle = diff3
+[gpg]
+	program = gpg
 
-[diff]
-	colorMoved = default
+[push]
+	autoSetupRemote = true
 
-[delta]
-	navigate = true
-	line-numbers = true
+[pull]
+	rebase = true
+
+[user]
+	email = kemingy94@gmail.com
+	name = Keming
+	signingkey = #TODO
+
+[includeIf "gitdir:~/Workspace/"]
+	path = ~/Workspace/.gitconfig
+
+[credential "https://github.com"]
+	helper = gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = gh auth git-credential

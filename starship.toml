@@ -9,3 +9,9 @@ show_always = true
 [sudo]
 disabled = false
 allow_windows = true
+
+[shell]
+disabled = false
+style = "green bold"
+fish_indicator = "🐟"
+bash_indicator = "🐚"
