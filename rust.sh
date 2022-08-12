@@ -2,8 +2,8 @@
 set -euo pipefail
 
 # Rust
-# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-# . ${HOME}/.cargo/env
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+. ${HOME}/.cargo/env
 
 # difftastic
 DIFF_VERSION="0.31.0"

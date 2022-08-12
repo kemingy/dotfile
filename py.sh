@@ -12,7 +12,7 @@ ${HOME}/miniconda3/bin/conda init
 . ${HOME}/.bashrc
 
 # related libraries
-${HOME}/miniconda3/bin/conda install -y -c conda-forge bat ripgrep exa fd-find
+${HOME}/miniconda3/bin/conda install -y -c conda-forge bat ripgrep exa fd-find starship
 pip install httpie flake8 black isort autoflake ipython
 mkdir -p ${HOME}/.config
 cp flake8 ${HOME}/.config/
