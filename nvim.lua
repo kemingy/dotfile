@@ -132,7 +132,7 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme github-theme]]
+-- vim.cmd [[colorscheme github-theme]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -140,7 +140,6 @@ vim.o.completeopt = 'menuone,noselect'
 -- Set scroll
 vim.o.scrolloff = 8
 vim.o.signcolumn = "yes"
-vim.o.isfname:append("@-@")
 
 -- [[ Basic Keymaps ]]
 -- Set <space> as the leader key
