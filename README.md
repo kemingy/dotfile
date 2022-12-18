@@ -12,16 +12,16 @@ This is my personal dotfile.
 
 - [x] [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 - [x] [fish-shell](https://fishshell.com)
-- [x] vimrc [https://github.com/amix/vimrc]
+- [x] [neovim](https://github.com/neovim/neovim)
+  - [x] config based on [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 - [x] [httpie](https://github.com/jakubroztocil/httpie)
-- [x] tmux.conf
 - [x] global git ignore
 - [x] [Rust](https://www.rust-lang.org/)
-- [x] [exa](https://github.com/ogham/exa)
-- [x] [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [x] [bat](https://github.com/sharkdp/bat)
-- [x] [difft](https://github.com/Wilfred/difftastic)
-- [x] [fd](https://github.com/sharkdp/fd)
+  - [x] [exa](https://github.com/ogham/exa)
+  - [x] [ripgrep](https://github.com/BurntSushi/ripgrep)
+  - [x] [bat](https://github.com/sharkdp/bat)
+  - [x] [difft](https://github.com/Wilfred/difftastic)
+  - [x] [fd](https://github.com/sharkdp/fd)
 
 ## install
 
