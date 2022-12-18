@@ -2,13 +2,13 @@
 set -euo pipefail
 
 # Neovim
-VERSION="v0.7.2"
+VERSION="v0.8.1"
 [ -f "${HOME}/Downloads/nvim-${VERSION}.tar.gz" ] || wget -O ${HOME}/Downloads/nvim-${VERSION}.tar.gz "https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-linux64.tar.gz"
 tar zxf "${HOME}/Downloads/nvim-${VERSION}.tar.gz" -C "${HOME}/Downloads/"
 echo "export PATH=${HOME}/Downloads/nvim-linux64/bin:\$PATH" >> "${HOME}/.bashrc"
 
 mkdir -p ${HOME}/.config/nvim
-cp ./init.vim ${HOME}/.config/nvim
+cp -r nvim ${HOME}/.config/
 
 # vim plugin
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -16,4 +16,3 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 # :PlugInstall
 ${HOME}/Downloads/nvim-linux64/bin/nvim +PlugInstall +qall
-
