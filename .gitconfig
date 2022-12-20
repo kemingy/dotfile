@@ -27,7 +27,7 @@
 	signingkey = #TODO
 
 [includeIf "gitdir:~/Tensorchord/"]
-	path = ~/tensorchord.gitconfig
+	path = ~/.gitconfig-tensorchord
 
 [credential "https://github.com"]
 	helper =

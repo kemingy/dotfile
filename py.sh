@@ -4,15 +4,15 @@ set -euo pipefail
 CONDA="Miniconda3-latest-Linux-x86_64.sh"
 
 # conda
-mkdir -p ${HOME}/Downloads
-[ -f "${HOME}/Downloads/${CONDA}" ] || wget -O ${HOME}/Downloads/${CONDA} "https://repo.anaconda.com/miniconda/${CONDA}"
-sh ${HOME}/Downloads/${CONDA} -b -u
-${HOME}/miniconda3/bin/conda init
-[ -f "${HOME}/Downloads/${CONDA}" ] || touch ${HOME}/.bashrc
+[ -f "/tmp/${CONDA}" ] || wget -O /tmp/${CONDA} "https://repo.anaconda.com/miniconda/${CONDA}"
+mkdir -p /opt/conda
+sudo chown $(whoami):$(whoami) /opt/conda
+sh /tmp/${CONDA} -b -u -p /opt/conda
+/opt/conda/bin/conda init
 . ${HOME}/.bashrc
 
 # related libraries
-${HOME}/miniconda3/bin/conda install -y -c conda-forge bat ripgrep exa fd-find starship
+/opt/conda/bin/conda install -y -c conda-forge bat ripgrep exa fd-find starship
 pip install httpie flake8 black isort autoflake ipython
 mkdir -p ${HOME}/.config
 cp flake8 ${HOME}/.config/
