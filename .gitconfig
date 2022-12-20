@@ -1,12 +1,12 @@
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = vim
+	editor = nvim
 
 [alias]
 	st = status
 	ci = commit -v
 	last = log -1 HEAD
-    lastd = diff HEAD~1...HEAD
+	lastd = diff HEAD~1...HEAD
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [commit]
@@ -26,8 +26,8 @@
 	name = Keming
 	signingkey = #TODO
 
-[includeIf "gitdir:~/Workspace/"]
-	path = ~/Workspace/.gitconfig
+[includeIf "gitdir:~/Tensorchord/"]
+	path = ~/tensorchord.gitconfig
 
 [credential "https://github.com"]
 	helper =
