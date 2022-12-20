@@ -109,12 +109,25 @@ vim.o.incsearch = true
 
 -- Make line numbers default
 vim.wo.number = true
+vim.wo.relativenumber = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
--- Enable break indent
+-- Cursor
+vim.w.cursorline = true
+
+-- Indent
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+vim.o.smartindent = true
 vim.o.breakindent = true
+
+-- listchars
+vim.o.list = true
+vim.o.listchars = [[tab:»·,extends:❯,precedes:❮,nbsp:±,trail:…]]
 
 -- Save undo history
 vim.o.swapfile = false
@@ -140,6 +153,9 @@ vim.o.completeopt = 'menuone,noselect'
 -- Set scroll
 vim.o.scrolloff = 8
 vim.o.signcolumn = "yes"
+
+-- spell check
+vim.o.spelllang = "en-us"
 
 -- [[ Basic Keymaps ]]
 -- Set <space> as the leader key
@@ -201,12 +217,15 @@ require('Comment').setup()
 vim.opt.list = true
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
+-- colors
+vim.cmd [[highlight IndentBlanklineContextSpaceChar guifg=#058af7 gui=nocombine]]
 require('indent_blankline').setup {
   char = '┊',
   show_current_context = true,
   show_current_context_start = true,
   show_end_of_line = true,
   show_trailing_blankline_indent = true,
+  context_space_char_highlight = IndentBlanklineContextSpaceChar,
 }
 
 -- Gitsigns
