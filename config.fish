@@ -31,6 +31,17 @@ else
     abbr -a lt 'ls --tree'
 end
 
+# abbr:docker
+if type -q docker
+    abbr -a dp 'docker ps'
+    abbr -a di 'docker images'
+end
+
+# abbr:kubectl
+if type -q kubectl
+    abbr -a kc 'kubectl'
+end
+
 # colored man output
 # from http://linuxtidbits.wordpress.com/2009/03/23/less-colors-for-man-pages/
 setenv LESS_TERMCAP_mb \e'[01;31m'       # begin blinking
