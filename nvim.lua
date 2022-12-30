@@ -68,6 +68,18 @@ require('packer').startup(function(use)
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
 
+  -- File Tree
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly',
+  }
+
+  -- Toggle Terminal
+  use {"akinsho/toggleterm.nvim", tag = "*" }
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
@@ -115,7 +127,8 @@ vim.wo.relativenumber = true
 vim.o.mouse = 'a'
 
 -- Cursor
-vim.w.cursorline = true
+vim.o.cursorline = true
+vim.o.cursorcolumn = false
 
 -- Indent
 vim.o.tabstop = 4
@@ -123,7 +136,7 @@ vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.smartindent = true
-vim.o.breakindent = true
+vim.o.cindent = true
 
 -- listchars
 vim.o.list = true
@@ -262,11 +275,6 @@ require('telescope').setup {
       },
     },
   },
-  pickers = {
-    find_files = {
-      hidden = true,
-    },
-  },
 }
 
 -- Enable telescope fzf native, if installed
@@ -294,7 +302,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'help', 'make', 'markdown' },
+  ensure_installed = { 'c', 'cpp', 'go', 'python', 'rust', 'typescript', 'help', 'make', 'markdown' },
 
   highlight = { enable = true },
   indent = { enable = true },
@@ -413,7 +421,7 @@ require('mason').setup()
 
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'sumneko_lua', 'gopls' }
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'gopls' }
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
@@ -440,27 +448,6 @@ require('fidget').setup()
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
-
-require('lspconfig').sumneko_lua.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  settings = {
-    Lua = {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT)
-        version = 'LuaJIT',
-        -- Setup your lua path
-        path = runtime_path,
-      },
-      diagnostics = {
-        globals = { 'vim' },
-      },
-      workspace = { library = vim.api.nvim_get_runtime_file('', true) },
-      -- Do not send telemetry data containing a randomized but unique identifier
-      telemetry = { enable = false },
-    },
-  },
-}
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
@@ -504,6 +491,11 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
+require("toggleterm").setup({
+  open_mapping = [[<A-f>]],
+})
+require("nvim-tree").setup()
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
