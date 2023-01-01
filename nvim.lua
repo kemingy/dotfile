@@ -126,13 +126,17 @@ vim.wo.relativenumber = true
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
+-- Clipboard ("+" && "*")
+vim.opt.clipboard:append 'unnamedplus'
+
 -- Cursor
 vim.o.cursorline = true
 vim.o.cursorcolumn = false
+vim.o.colorcolumn = '80,100'
 
 -- Indent
 vim.o.tabstop = 4
-vim.o.softtabstop = 4
+vim.o.softtabstop = 0  -- do NOT mix up tab and space
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.smartindent = true
@@ -146,7 +150,7 @@ vim.o.listchars = [[tab:»·,extends:❯,precedes:❮,nbsp:±,trail:…]]
 vim.o.swapfile = false
 vim.o.backup = false
 vim.o.undofile = true
-vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.o.undodir = os.getenv("HOME") .. "/.config/nvim/undodir"
 
 -- Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
@@ -168,7 +172,7 @@ vim.o.scrolloff = 8
 vim.o.signcolumn = "yes"
 
 -- spell check
-vim.o.spelllang = "en-us"
+vim.o.spelllang = "en"
 
 -- [[ Basic Keymaps ]]
 -- Set <space> as the leader key
@@ -193,12 +197,11 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- replace
-vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- copy to system clipboard
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>Y", "\"+Y")
+vim.keymap.set({"n", "v"}, "<leader>y", [["*y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
