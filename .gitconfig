@@ -6,7 +6,6 @@
 	st = status
 	cm = commit -s -m
 	ck = checkout
-	new = checkout -b
 	up = "!git fetch upstream && git merge upstream/main"
 	last = log -1 HEAD
 	lastd = diff HEAD~1...HEAD
@@ -17,6 +16,7 @@
 
 [gpg]
 	program = gpg
+	format = ssh
 
 [push]
 	autoSetupRemote = true
@@ -30,7 +30,7 @@
 [user]
 	email = kemingy94@gmail.com
 	name = Keming
-	signingkey = #TODO
+	signingkey = ~/.ssh/id_ed25519.pub
 
 [includeIf "gitdir:~/Tensorchord/"]
 	path = ~/.gitconfig-tensorchord
