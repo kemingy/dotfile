@@ -5,6 +5,7 @@ if type -q git
     abbr -a gitd 'git diff'
     abbr -a gita 'git add'
     abbr -a gitp 'git push'
+    abbr -a gitn 'git checkout -b'
     abbr -a gitup 'git fetch upstream && git merge upstream/main'
 end
 

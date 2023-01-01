@@ -4,7 +4,10 @@
 
 [alias]
 	st = status
-	ci = commit -v
+	cm = commit -s -m
+	ck = checkout
+	new = checkout -b
+	up = "!git fetch upstream && git merge upstream/main"
 	last = log -1 HEAD
 	lastd = diff HEAD~1...HEAD
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
@@ -20,6 +23,9 @@
 
 [pull]
 	rebase = true
+
+[diff]
+	external = difft
 
 [user]
 	email = kemingy94@gmail.com
