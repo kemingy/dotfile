@@ -16,6 +16,9 @@ export LC_ALL=en_US.UTF-8
 # bat
 if type -q bat
     export BAT_THEME=GitHub
+    export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+    export MANROFFOPT="-c"
+    abbr -a show 'bat --show-all'
 end
 
 # abbr:exa
@@ -57,6 +60,14 @@ setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 function rrg -d "make sure `rg` result can jump to the match line in VSCode terminal"
     # TODO: color support (--color always)
     rg --no-heading -n $argv | sed 's/:[0-9]\+:/& /'
+end
+
+if type -q bat
+    function hp -d "highlight help messages with `bat`"
+        argparse --min-args 1 --max-args 1 'h/help' -- $argv
+        or return
+        $argv[1] --help 2>&1 | bat --plain --language=help
+    end
 end
 
 # starship (this has to be placed at the end of this file)
