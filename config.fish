@@ -64,9 +64,9 @@ end
 
 if type -q bat
     function hp -d "highlight help messages with `bat`"
-        argparse --min-args 1 --max-args 1 'h/help' -- $argv
+        argparse --min-args 1 'h/help' -- $argv
         or return
-        $argv[1] --help 2>&1 | bat --plain --language=help
+        $argv --help 2>&1 | bat --plain --language=help
     end
 end
 
