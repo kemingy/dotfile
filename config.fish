@@ -1,3 +1,6 @@
+# merge fish history across sessions
+abbr -a hr 'history --merge'
+
 # git
 if type -q git
     abbr -a gitc 'git commit -s -m'
