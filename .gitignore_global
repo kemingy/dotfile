@@ -7,8 +7,6 @@ Untitled*.ipynb
 *.pyo
 *.bak
 *.swp
-venv
-vendor
 
 # Editor #
 ##########
@@ -42,8 +40,6 @@ vendor
 # Logs and databases #
 ######################
 *.log
-*.sql
-*.sqlite
 
 # OS generated files #
 ######################
