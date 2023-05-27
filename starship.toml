@@ -15,3 +15,15 @@ disabled = false
 style = "green bold"
 fish_indicator = "🐟"
 bash_indicator = "🐚"
+
+[gcloud]
+disabled = true
+
+[cmd_duration]
+min_time = 5
+show_notifications = true
+min_time_to_notify = 30_000
+
+[time]
+disabled = false
+
