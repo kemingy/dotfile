@@ -48,14 +48,7 @@ require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim' -- blame
 
   -- theme
-  use({
-    'projekt0n/github-nvim-theme',
-    config = function()
-      require('github-theme').setup({
-        theme_style = "light",
-      })
-    end
-  })
+  use 'projekt0n/github-nvim-theme'
 
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
@@ -67,15 +60,6 @@ require('packer').startup(function(use)
 
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
-
-  -- File Tree
-  use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly',
-  }
 
   -- Toggle Terminal
   use {"akinsho/toggleterm.nvim", tag = "*" }
@@ -93,6 +77,13 @@ require('packer').startup(function(use)
       require("nvim-autopairs").setup{}
     end
   }
+
+  -- -- Inlay hints
+  -- use {
+  --   "lvimuser/lsp-inlayhints.nvim", config = function()
+  --     require("lsp-inlayhints").setup()
+  --   end
+  -- }
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
@@ -176,7 +167,7 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
--- vim.cmd [[colorscheme github-theme]]
+vim.cmd('colorscheme github_light_high_contrast')
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -518,8 +509,6 @@ cmp.setup {
 require("toggleterm").setup({
   open_mapping = [[<A-f>]],
 })
-
-require("nvim-tree").setup()
 
 -- restore cursor position
 -- borrowed from https://github.com/neovim/neovim/issues/16339#issuecomment-1348133829
