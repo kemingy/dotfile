@@ -8,8 +8,8 @@ if type -q git
     abbr -a gitd 'git diff'
     abbr -a gita 'git add'
     abbr -a gitp 'git push'
-    abbr -a gitm 'git checkout main'
-    abbr -a gitn 'git checkout -b'
+    abbr -a gitm 'git switch main'
+    abbr -a gitn 'git switch -c'
     abbr -a gitup 'git fetch upstream && git merge upstream/main'
 end
 
