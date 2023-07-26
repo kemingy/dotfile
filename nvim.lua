@@ -17,10 +17,16 @@ require('packer').startup(function(use)
       -- Automatically install LSPs to stdpath for neovim
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
-
-      -- Useful status updates for LSP
-      'j-hui/fidget.nvim',
     },
+  }
+
+  -- Useful status updates for LSP
+  use {
+    'j-hui/fidget.nvim',
+    tag = 'legacy',
+    config = function()
+      require("fidget").setup {}
+    end,
   }
 
   use { -- Autocompletion
@@ -167,7 +173,7 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd('colorscheme github_light_high_contrast')
+vim.cmd('colorscheme github_light')
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -446,9 +452,6 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
-
--- Turn on lsp status information
-require('fidget').setup()
 
 -- Example custom configuration for lua
 --
