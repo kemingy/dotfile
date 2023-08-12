@@ -9,10 +9,8 @@ mkdir -p /opt/conda
 sudo chown $(whoami):$(whoami) /opt/conda
 sh /tmp/${CONDA} -b -u -p /opt/conda
 /opt/conda/bin/conda init
-. ${HOME}/.bashrc
 
 # related libraries
-/opt/conda/bin/conda install -y -c conda-forge bat ripgrep exa fd-find starship
-pip install httpie flake8 black isort autoflake ipython
+/opt/conda/bin/conda install -y -c conda-forge bat ripgrep exa fd-find starship gh
+pip install httpie ruff black ipython
 mkdir -p ${HOME}/.config
-cp flake8 ${HOME}/.config/
