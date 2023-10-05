@@ -57,7 +57,7 @@ require('packer').startup(function(use)
   use 'projekt0n/github-nvim-theme'
 
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
-  use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
+  use {'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {}} -- Add indentation guides even on blank lines
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
   use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 
@@ -256,13 +256,10 @@ vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
 -- colors
 vim.cmd [[highlight IndentBlanklineContextSpaceChar guifg=#058af7 gui=nocombine]]
-require('indent_blankline').setup {
-  char = '┊',
-  show_current_context = true,
-  show_current_context_start = true,
-  show_end_of_line = true,
-  show_trailing_blankline_indent = true,
-  context_space_char_highlight = IndentBlanklineContextSpaceChar,
+require('ibl').setup {
+  indent = {
+    char = '┊',
+  },
 }
 
 -- Gitsigns
@@ -316,7 +313,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'python', 'rust', 'typescript', 'help', 'make', 'markdown' },
+  ensure_installed = { 'go', 'python', 'rust', 'help', 'make', 'markdown' },
 
   highlight = { enable = true },
   indent = { enable = true },
