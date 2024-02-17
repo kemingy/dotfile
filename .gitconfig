@@ -11,18 +11,29 @@
 	lastd = diff HEAD~1...HEAD
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
-[commit]
-	gpgsign = true
+[init]
+	defaultBranch = main
 
-[gpg]
-	program = gpg
-	format = ssh
+[help]
+	autocorrect = 5
 
 [push]
 	autoSetupRemote = true
 
 [pull]
 	rebase = true
+
+[merge]
+	conflictstyle = diff3
+
+[log]
+	date = iso
+
+[branch]
+	sort = -committerdate
+
+[url "git@github.com:"]
+	insteadOf = "https://github.com/"
 
 [diff]
 	external = difft
