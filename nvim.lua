@@ -255,12 +255,7 @@ vim.opt.list = true
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
 -- colors
-vim.cmd [[highlight IndentBlanklineContextSpaceChar guifg=#058af7 gui=nocombine]]
-require('ibl').setup {
-  indent = {
-    char = '┊',
-  },
-}
+require('ibl').setup()
 
 -- Gitsigns
 -- See `:help gitsigns.txt`
@@ -313,7 +308,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'help' },
+  ensure_installed = { 'python' },
 
   highlight = { enable = true },
   indent = { enable = true },
