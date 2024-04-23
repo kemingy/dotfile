@@ -41,7 +41,6 @@
 [user]
 	email = kemingy94@gmail.com
 	name = Keming
-	signingkey = ~/.ssh/id_ed25519.pub
 
 [includeIf "gitdir:~/TensorChord/"]
 	path = ~/.gitconfig-tensorchord
