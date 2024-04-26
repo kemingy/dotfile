@@ -14,3 +14,4 @@ sh /tmp/${CONDA} -b -u -p /opt/conda
 /opt/conda/bin/conda install -y -c conda-forge ncurses bat ripgrep exa fd-find starship gh typos
 /opt/conda/bin/pip install httpie ruff black ipython
 mkdir -p ${HOME}/.config
+cp starship.toml ${HOME}/.config/
