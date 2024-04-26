@@ -54,7 +54,7 @@ require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim' -- blame
 
   -- theme
-  use 'projekt0n/github-nvim-theme'
+  use 'Mofiqul/vscode.nvim'
 
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use {'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {}} -- Add indentation guides even on blank lines
@@ -173,7 +173,6 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd('colorscheme github_light')
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -230,7 +229,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'onelight',
+    theme = 'vscode',
     component_separators = '|',
     section_separators = '',
   },
@@ -248,6 +247,15 @@ require('lualine').setup {
 
 -- Enable Comment.nvim
 require('Comment').setup()
+
+-- Theme
+require('vscode').setup({
+    style = 'light',
+    italic_comments = true,
+    underline_links = true,
+    transparent = true,
+})
+vim.cmd.colorscheme "vscode"
 
 -- Enable `lukas-reineke/indent-blankline.nvim`
 -- See `:help indent_blankline.txt`
