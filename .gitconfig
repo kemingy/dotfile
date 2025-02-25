@@ -2,6 +2,9 @@
 	excludesfile = ~/.gitignore_global
 	editor = nvim
 
+[feature]
+	experimental = true
+
 [alias]
 	st = status
 	cm = commit -s -m
@@ -15,13 +18,23 @@
 	defaultBranch = main
 
 [help]
-	autocorrect = 5
+	autocorrect = prompt
+
+[column]
+	ui = auto
 
 [push]
 	autoSetupRemote = true
+	followTags = true
+	default = simple
 
 [pull]
 	rebase = true
+
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
 
 [merge]
 	conflictstyle = diff3
@@ -32,11 +45,25 @@
 [branch]
 	sort = -committerdate
 
+[tag]
+	sort = version:refname
+
+[commit]
+	verbose = true
+
+[rerere]
+	enabled = true
+	autoupdate = true
+
 ; [url "git@github.com:"]
 ; 	insteadOf = "https://github.com/"
 
 [diff]
 	external = difft
+	algorithm = histogram
+	colorMoved = plain
+	rename = true
+	mnemonicPrefix = true
 
 [user]
 	email = kemingy94@gmail.com

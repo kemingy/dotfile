@@ -38,3 +38,5 @@ cd ~/.dotfile && sh bootstrap.sh
 
 * [Desktop and editor setup for Rust development by Jon Gjengset](https://youtu.be/ycMiMDHopNc)
 * [Nu Shell: a new type of shell that print in table format](https://github.com/nushell/nushell)
+* [Popular git config options](https://jvns.ca/blog/2024/02/16/popular-git-config-options/)
+* [How Core Git Developers Configure Git](https://blog.gitbutler.com/how-git-core-devs-configure-git/)
