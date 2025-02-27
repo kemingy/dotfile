@@ -17,7 +17,7 @@ This is my personal dotfile.
 - [x] [httpie](https://github.com/jakubroztocil/httpie)
 - [x] global git ignore
 - [x] [Rust](https://www.rust-lang.org/)
-  - [x] [exa](https://github.com/ogham/exa)
+  - [x] [eza](https://github.com/eza-community/eza)
   - [x] [ripgrep](https://github.com/BurntSushi/ripgrep)
   - [x] [bat](https://github.com/sharkdp/bat)
   - [x] [difft](https://github.com/Wilfred/difftastic)

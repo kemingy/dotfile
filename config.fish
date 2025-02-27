@@ -25,13 +25,13 @@ if type -q bat
     abbr -a show 'bat --show-all'
 end
 
-# abbr:exa
-if type -q exa
-    abbr -a l 'exa'
-    abbr -a ls 'exa'
-    abbr -a ll 'exa -l'
-    abbr -a lla 'exa -la'
-    abbr -a lt 'exa --tree'
+# abbr:eza
+if type -q eza
+    abbr -a l 'eza'
+    abbr -a ls 'eza'
+    abbr -a ll 'eza -l'
+    abbr -a lla 'eza -la'
+    abbr -a lt 'eza --tree'
 else
     abbr -a l 'ls'
     abbr -a ll 'ls -l'
