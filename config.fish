@@ -14,8 +14,8 @@ if type -q git
 end
 
 # encode
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+export LANG=C.UTF-8
+export LC_ALL=C.UTF-8
 
 # bat
 if type -q bat
