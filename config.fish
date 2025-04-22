@@ -75,6 +75,11 @@ if type -q bat
     end
 end
 
+# pixi
+if type -q pixi
+    pixi completion --shell fish | source
+end
+
 # starship (this has to be placed at the end of this file)
 if type -q starship
     starship init fish | source
