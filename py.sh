@@ -1,17 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 
-CONDA="Miniconda3-latest-Linux-x86_64.sh"
+# pixi
+curl -fsSL https://pixi.sh/install.sh | sh
+export PATH=$PATH:$HOME/.pixi/bin
 
-# conda
-[ -f "/tmp/${CONDA}" ] || wget -O /tmp/${CONDA} "https://repo.anaconda.com/miniconda/${CONDA}"
-sudo mkdir -p /opt/conda
-sudo chown $(whoami):$(whoami) /opt/conda
-sh /tmp/${CONDA} -b -u -p /opt/conda
-/opt/conda/bin/conda init
-
-# related libraries
-/opt/conda/bin/conda install -y -c conda-forge ncurses bat ripgrep eza fd-find starship gh typos
-/opt/conda/bin/pip install httpie ruff black ipython
+# conda libraries
+pixi global install bat ripgrep eza fd-find starship gh typos
+# pypi libraries
+pixi global install httpie ruff ipython
 mkdir -p ${HOME}/.config
 cp starship.toml ${HOME}/.config/

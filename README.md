@@ -10,7 +10,7 @@ This is my personal dotfile.
 
 **basic env**
 
-- [x] [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+- [x] [pixi](https://pixi.sh)
 - [x] [fish-shell](https://fishshell.com)
 - [x] [neovim](https://github.com/neovim/neovim)
   - [x] config based on [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
