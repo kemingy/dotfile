@@ -1,0 +1,50 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "ui_font_size": 18,
+  "buffer_font_size": 18,
+  "buffer_font_family": "Caskaydia Cove Nerd Font Complete Mono",
+  "theme": {
+    "mode": "system",
+    "dark": "One Dark",
+    "light": "Ayu Light"
+  },
+  "terminal": {
+    "blinking": "on",
+    "font_size": 16,
+    "font_family": "Caskaydia Cove Nerd Font Complete Mono"
+  },
+  "indent_guides": {
+    "coloring": "indent_aware",
+    "background_coloring": "indent_aware"
+  },
+  "autosave": "on_focus_change",
+  "inlayHints": {
+    "enabled": true,
+    "maxLength": null,
+    "lifetimeElisionHints": {
+      "useParameterNames": true,
+      "enable": "skip_trivial"
+    },
+    "closureReturnTypeHints": {
+      "enable": "always"
+    }
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "preferred_line_length": 80,
+  "show_whitespaces": "all",
+  "soft_wrap": "preferred_line_length",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  }
+}
