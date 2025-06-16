@@ -7,13 +7,14 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "icon_theme": "Material Icon Theme",
   "ui_font_size": 18,
   "buffer_font_size": 18,
   "buffer_font_family": "Caskaydia Cove Nerd Font Complete Mono",
   "theme": {
     "mode": "system",
     "dark": "One Dark",
-    "light": "Ayu Light"
+    "light": "GitHub Light Classic"
   },
   "terminal": {
     "blinking": "on",

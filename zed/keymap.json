@@ -9,7 +9,6 @@
   {
     "context": "Workspace",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
       "alt-f": "terminal_panel::ToggleFocus"
     }
   },
@@ -17,6 +16,13 @@
     "context": "Editor",
     "bindings": {
       // "j k": ["workspace::SendKeystrokes", "escape"]
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "alt-c": "terminal::Copy",
+      "alt-v": "terminal::Paste"
     }
   }
 ]
