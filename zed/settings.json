@@ -8,9 +8,9 @@
 // from the command palette or from `Zed` application menu.
 {
   "icon_theme": "Material Icon Theme",
-  "ui_font_size": 18,
-  "buffer_font_size": 18,
-  "buffer_font_family": "Caskaydia Cove Nerd Font Complete Mono",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
   "theme": {
     "mode": "system",
     "dark": "One Dark",
@@ -19,23 +19,19 @@
   "terminal": {
     "blinking": "on",
     "font_size": 16,
-    "font_family": "Caskaydia Cove Nerd Font Complete Mono"
+    "font_family": "JetBrainsMono Nerd Font Mono"
   },
   "indent_guides": {
     "coloring": "indent_aware",
     "background_coloring": "indent_aware"
   },
+  "minimap": { "show": "auto" },
   "autosave": "on_focus_change",
-  "inlayHints": {
+  "inlay_hints": {
     "enabled": true,
-    "maxLength": null,
-    "lifetimeElisionHints": {
-      "useParameterNames": true,
-      "enable": "skip_trivial"
-    },
-    "closureReturnTypeHints": {
-      "enable": "always"
-    }
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
   },
   "tabs": {
     "file_icons": true,
@@ -44,6 +40,25 @@
   "preferred_line_length": 80,
   "show_whitespaces": "all",
   "soft_wrap": "preferred_line_length",
+  "lsp": {
+    "pyright": {
+      "settings": { "python": { "pythonPath": ".venv/bin/python" } }
+    },
+    "rust-analyzer": {
+      "initialization_options": {
+        "inlayHints": {
+          "maxLength": null,
+          "lifetimeElisionHints": {
+            "enable": "skip_trivial",
+            "useParameterNames": true
+          },
+          "closureReturnTypeHints": {
+            "enable": "always"
+          }
+        }
+      }
+    }
+  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false
