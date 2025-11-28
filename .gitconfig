@@ -13,6 +13,8 @@
 	last = log -1 HEAD
 	lastd = diff HEAD~1...HEAD
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lgme = lg --author="kemingy94@gmail.com"
+	df = diff --no-ext-diff
 
 [init]
 	defaultBranch = main
