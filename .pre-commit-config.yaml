@@ -9,11 +9,13 @@ repos:
       - id: trailing-whitespace
   - repo: local
     hooks:
+      # https://github.com/JohnnyMorganz/StyLua
       - id: stylua
         name: lua-format
         entry: stylua
         language: system
         types: [lua]
+      # https://github.com/mvdan/sh
       - id: shfmt
         name: sh-format
         entry: shfmt -l -w
