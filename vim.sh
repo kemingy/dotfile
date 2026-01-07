@@ -3,10 +3,15 @@ set -euo pipefail
 
 # Neovim
 VERSION="nightly"
-[ -f "$/tmp/nvim-${VERSION}.tar.gz" ] || wget -O /tmp/nvim-${VERSION}.tar.gz "https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-linux-$(uname -m).tar.gz"
-mkdir -p ${HOME}/.nvim
-tar zxf "/tmp/nvim-${VERSION}.tar.gz" -C "${HOME}/.nvim" --strip-components=1
-echo "export PATH=${HOME}/.nvim/bin:\$PATH" >> "${HOME}/.bashrc"
+ARCHIVE="/tmp/nvim-${VERSION}.tar.gz"
 
-mkdir -p ${HOME}/.config/nvim
-cp nvim.lua ${HOME}/.config/nvim/init.lua
+if [ ! -f "${ARCHIVE}" ]; then
+	wget -O "${ARCHIVE}" "https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-linux-$(uname -m).tar.gz"
+fi
+
+mkdir -p "${HOME}/.nvim"
+tar zxf "${ARCHIVE}" -C "${HOME}/.nvim" --strip-components=1
+echo "export PATH=${HOME}/.nvim/bin:\$PATH" >>"${HOME}/.bashrc"
+
+mkdir -p "${HOME}/.config/nvim"
+cp nvim.lua "${HOME}/.config/nvim/init.lua"

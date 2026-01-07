@@ -1,0 +1,21 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-docstring-first
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: local
+    hooks:
+      - id: stylua
+        name: lua-format
+        entry: stylua
+        language: system
+        types: [lua]
+      - id: shfmt
+        name: sh-format
+        entry: shfmt -l -w
+        language: system
+        types: [shell]
