@@ -57,8 +57,9 @@
 	enabled = true
 	autoupdate = true
 
-[url "git@github.com:"]
-	insteadOf = "https://github.com/"
+; NOTE: this requires `gh login` for credential, see the config below
+; [url "git@github.com:"]
+; 	insteadOf = "https://github.com/"
 
 [diff]
 	external = difft
