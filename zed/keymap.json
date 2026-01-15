@@ -22,7 +22,8 @@
     "context": "Terminal",
     "bindings": {
       "alt-c": "terminal::Copy",
-      "alt-v": "terminal::Paste"
+      "alt-v": "terminal::Paste",
+      "alt-f": "editor::ToggleFocus"
     }
   }
 ]
