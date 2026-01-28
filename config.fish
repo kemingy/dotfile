@@ -4,6 +4,7 @@ abbr -a hr 'history --merge'
 # git
 if type -q git
     abbr -a gitc 'git commit -s'
+    abbr -a gitcc 'git commit -s -t .git/COMMIT_EDITMSG'
     abbr -a gits 'git status'
     abbr -a gitd 'git diff'
     abbr -a gita 'git add'
