@@ -3,7 +3,7 @@ abbr -a hr 'history --merge'
 
 # git
 if type -q git
-    abbr -a gitc 'git commit -s -m'
+    abbr -a gitc 'git commit -s'
     abbr -a gits 'git status'
     abbr -a gitd 'git diff'
     abbr -a gita 'git add'
