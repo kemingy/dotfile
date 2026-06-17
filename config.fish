@@ -1,3 +1,10 @@
+# add to $PATH
+for p in /usr/local/bin $HOME/.local/bin $HOME/.pixi/bin $HOME/.nvim/bin $HOME/.cargo/bin
+    if test -d $p
+        fish_add_path --append $p
+    end
+end
+
 # merge fish history across sessions
 abbr -a hr 'history --merge'
 
