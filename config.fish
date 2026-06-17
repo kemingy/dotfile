@@ -1,6 +1,6 @@
 # add to $PATH
 for p in /usr/local/bin $HOME/.local/bin $HOME/.pixi/bin $HOME/.nvim/bin $HOME/.cargo/bin
-    if path filter -qd $p
+    if test -d $p
         fish_add_path --append $p
     end
 end
