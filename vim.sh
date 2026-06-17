@@ -4,9 +4,11 @@ set -euo pipefail
 # Neovim
 VERSION="nightly"
 ARCHIVE="/tmp/nvim-${VERSION}.tar.gz"
+PLATFORM=$([ "$(uname -s)" = "Darwin" ] && echo macos || echo linux)
+ARCH=$(uname -m)
 
 if [ ! -f "${ARCHIVE}" ]; then
-	wget -O "${ARCHIVE}" "https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-linux-$(uname -m).tar.gz"
+	curl -o "${ARCHIVE}" -L "https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-${PLATFORM}-${ARCH}.tar.gz"
 fi
 
 mkdir -p "${HOME}/.nvim"
