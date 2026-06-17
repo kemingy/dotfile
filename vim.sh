@@ -5,10 +5,10 @@ set -euo pipefail
 VERSION="nightly"
 ARCHIVE="/tmp/nvim-${VERSION}.tar.gz"
 PLATFORM=$([ "$(uname -s)" = "Darwin" ] && echo macos || echo linux)
-ARCH=$(uname -m)
+ARCH=$([ "$(uname -m)" = "aarch64" ] && echo arm64 || uname -m)
 
 if [ ! -f "${ARCHIVE}" ]; then
-	curl -o "${ARCHIVE}" -L "https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-${PLATFORM}-${ARCH}.tar.gz"
+	curl -o "${ARCHIVE}" -fL "https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-${PLATFORM}-${ARCH}.tar.gz"
 fi
 
 mkdir -p "${HOME}/.nvim"
