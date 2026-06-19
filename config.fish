@@ -39,7 +39,7 @@ if type -q eza
     abbr -a ls 'eza'
     abbr -a ll 'eza -l'
     abbr -a lla 'eza -la'
-    abbr -a lt 'eza --tree'
+    abbr -a lt 'eza --tree --git-ignore'
 else
     abbr -a l 'ls'
     abbr -a ll 'ls -l'

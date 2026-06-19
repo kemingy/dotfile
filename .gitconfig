@@ -7,7 +7,7 @@
 
 [alias]
 	st = status
-	cm = commit -s -m
+	cm = commit -s
 	ck = checkout
 	up = "!git fetch upstream && git merge upstream/main"
 	last = log -1 HEAD
@@ -72,8 +72,8 @@
 	email = kemingy94@gmail.com
 	name = Keming
 
-[includeIf "gitdir:~/TensorChord/"]
-	path = ~/.gitconfig-tensorchord
+[includeIf "gitdir:~/Workspace/"]
+	path = ~/.gitconfig-workspace
 
 [credential "https://github.com"]
 	helper =

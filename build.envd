@@ -10,5 +10,4 @@ def build():
     shell("fish")
     install.uv()
     install.codex()
-    install.nodejs()
     runtime.mount("~/.codex", "~/.codex")
