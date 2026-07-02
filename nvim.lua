@@ -75,7 +75,7 @@ local plugins = {
 		priority = 1000,
 		config = function()
 			require("vscode").setup({
-				style = "light",
+				style = vim.o.background,
 				italic_comments = true,
 				underline_links = true,
 				transparent = true,
