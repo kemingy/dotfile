@@ -2,8 +2,10 @@
 set -euo pipefail
 
 # git
-cp .gitconfig ${HOME}/.gitconfig
-cp .gitignore_global ~/.gitignore_global
+GIT_XDG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/git"
+mkdir -p "$GIT_XDG_DIR"
+cp .gitconfig "$GIT_XDG_DIR/config"
+cp .gitignore_global "$GIT_XDG_DIR/ignore"
 
 # difftastic
 DIFF_VERSION="0.69.0"

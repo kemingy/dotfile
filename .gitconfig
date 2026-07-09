@@ -1,5 +1,4 @@
 [core]
-	excludesfile = ~/.gitignore_global
 	editor = nvim
 
 [feature]
@@ -73,7 +72,7 @@
 	name = Keming
 
 [includeIf "gitdir:~/Workspace/"]
-	path = ~/.gitconfig-workspace
+	path = ~/.config/git/config-workspace
 
 [credential "https://github.com"]
 	helper =
