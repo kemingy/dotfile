@@ -72,7 +72,7 @@
 	name = Keming
 
 [includeIf "gitdir:~/Workspace/"]
-	path = ~/git/config-workspace
+	path = ~/.config/git/config-workspace
 
 [credential "https://github.com"]
 	helper =
