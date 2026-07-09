@@ -2,8 +2,9 @@
 set -euo pipefail
 
 # git
-cp .gitconfig ${HOME}/.gitconfig
-cp .gitignore_global ~/.gitignore_global
+mkdir -p ${HOME}/git
+cp .gitconfig ${HOME}/git/config
+cp .gitignore_global ${HOME}/git/ignore
 
 # difftastic
 DIFF_VERSION="0.69.0"
