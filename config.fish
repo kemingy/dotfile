@@ -78,7 +78,7 @@ if type -q bat
 end
 
 if type -q nvim
-    function nvim
+    function nvim --wraps=nvim -d "Open Neovim (supports file:line shorthand)"
         if test (count $argv) -eq 1
             set -l parts (string match --regex --groups-only '^(.+):([0-9]+)$' -- $argv[1])
             if test (count $parts) -eq 2; and test -f "$parts[1]"
