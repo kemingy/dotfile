@@ -68,18 +68,26 @@ setenv LESS_TERMCAP_so \e'[38;5;246m'    # begin standout-mode - info box
 setenv LESS_TERMCAP_ue \e'[0m'           # end underline
 setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
-## functions
-# legacy: VSCode terminal support this now
-function rrg -d "make sure `rg` result can jump to the match line in VSCode terminal"
-    # TODO: color support (--color always)
-    rg --no-heading -n $argv | sed 's/:[0-9]\+:/& /'
-end
-
+# functions
 if type -q bat
     function hp -d "highlight help messages with `bat`"
         argparse --min-args 1 'h/help' -- $argv
         or return
         $argv --help 2>&1 | bat --plain --language=help
+    end
+end
+
+if type -q nvim
+    function nvim
+        if test (count $argv) -eq 1
+            set -l parts (string match --regex --groups-only '^(.+):([0-9]+)$' -- $argv[1])
+            if test (count $parts) -eq 2; and test -f "$parts[1]"
+                command nvim "+$parts[2]" -- "$parts[1]"
+                return
+            end
+        end
+
+        command nvim $argv
     end
 end
 
