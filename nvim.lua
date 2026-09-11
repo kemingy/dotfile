@@ -261,6 +261,10 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- replace
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
+-- delete line without changing any register
+vim.keymap.set("n", "<leader>d", [["_dd]])
+vim.keymap.set("v", "<leader>d", [["_d]])
+
 -- copy to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["*y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
